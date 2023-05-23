@@ -15,7 +15,8 @@ install.packages("gbm")
 install_github("rretkute/AMbeRlandTR")
 ``` 
 
-#### Example use:
+#### Example use
+This will produce trees with 1,024 cell tips. Approximate running time is 30-40 minutes on a MacBook Pro with 2.4GHz 8-Core processor.
 
 ```r
 library(phytools)
@@ -32,7 +33,7 @@ targets<-2943  # Number of targets
 notmut<- "0"  # Symbol for not-mutated state
 mut<-"1"  # Symbol for mutated state
 mut.rate<-0.0005446278 # Mutation rate (per division & target)
-divisions<-8  #  Number of divisions
+divisions<-10  #  Number of divisions
 
 ##  Create training data 
 n.train<-10 # Number of colonies for training
@@ -47,7 +48,7 @@ for(ii in 1:n.train){
 ML.model<-fit.model(training_data)
 
 ## Tree reconstruction
-thrs<-c(0.05, 0.025, 0.01, 0.001, rep(0, 15))
+thrs<-rep(0, 15)
 # Simulate tree
 treeGT<-sim_tree(targets, divisions, mut.rate, notmut, mut)
 # Extract barcodes
@@ -66,5 +67,6 @@ cat(c( "RF", rf, "\n"))
 # Matched splits are assigned a similarity score of 1.
 VisualizeMatching(RobinsonFouldsMatching, treeGT, treeRC)
 ``` 
+![](CompareTrees.png)
 
 
