@@ -1,7 +1,7 @@
 # AMbeRlandTR
 Machine learning based lineage tree reconstruction. This package is associated with the following manuscript:
 
-Alisa Prusokiene, Augustinas Prusokas, Renata Retkute. "Machine learning based lineage tree reconstruction improved with knowledge of higher level relationships between cells and genomic barcodes".
+Alisa Prusokiene, Augustinas Prusokas, Renata Retkute. "Machine learning based lineage tree reconstruction improved with knowledge of higher level relationships between cells and genomic barcodes". https://doi.org/10.1093/nargab/lqad077
 
 #### Installation
 
